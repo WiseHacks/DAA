@@ -48,8 +48,19 @@
 This paper contains the design and the detailed analysis of the algorithm used to solve the following problem: Implement Strassen’s matrix algorithm using divide and
 conquer.
 \end{abstract}
-\section{INTRODUCTION}
-In this report we are going to discuss how to implement strassen matrix multiplication algorithm.matrix multiplication is a binary operation that produces a matrix from two matrices. For matrix multiplication, the number of columns in the first matrix must be equal to the number of rows in the second matrix. The resulting matrix, known as the matrix product, has the number of rows of the first and the number of columns of the second matrix. strassen's algorithm is used for multiplication of square matrix.it is based on divide and conquer technique.strassen's algorithm is used to reduce the time complexity from $O(N^3)$ to $O(N^(2.81))$ by decreasing the number of multiplications 8 to 7.it is valid for even values of n where matrices A and B are of the order $n\times n$.
+\section{Introduction}
+Strassen's Algorithm is used to compute multiplication of two matrices. There is a condition for the matrix multiplication :
+If $A_{m\times n} \text{ and } B_{p\times q}$ then $C = A\times B$ is only possible when $p=q$ and the resultant matrix $C$ will be the matrix with size of $m\times q$. Strassen's algorithm is used for multiplication of square matrix. This algorithm is based on divide and conquer technique. Strassen's algorithm is basically an improvement in standard divide and conquer approach to compute multiplication of two matrices.
+
+This report further contains -
+
+II. Algorithmic Design
+
+III. Algorithm Analysis
+
+IV. Experimental Study
+
+V. Conclusion 
 
 \section{Algorithmic Design}
 
@@ -288,6 +299,7 @@ Note that Addition and Subtraction in Matrix works differently than numbers, run
     }
     
 \end{algorithm}
+
 \section{Algorithm Analysis}
 \subsection{Time Complexity:}
 
@@ -309,6 +321,82 @@ $T_{best} = O(1)$
 
 \subsection{Space Complexity}
 The space complexity for both algorithms is $O(n^2)$.
+
+\section{Experimental Analysis}
+
+
+\textbf{Graph - 1 : } It can be clearly seen that first graph has $O(n^3)$ behaviour.
+
+\textbf{Graph - 2 : } The second graph has something like sub-cubic behaviour.
+
+
+
+
+\begin{tikzpicture}[trim left=0cm]
+\begin{axis}[
+    title={n vs t graph for algorithm - naive approach},
+    xlabel={Dimension [n]},
+    ylabel={Time [t in ns]},
+    xmin=0, xmax=50,
+    ymin=0, ymax=80000,
+    xtick={0,10,20,30,40},
+    ytick={0,10000,20000,30000,40000,50000,60000,70000}
+]
+\addplot[
+    color=blue,
+    mark=dot,
+    ]
+    coordinates {
+   (0,0)(5,120)(10,1010)(15,3365)(19,6851)(24,13874)(29,24399)(30,27023)(32,32758)(45,91168)
+    };
+    
+  \end{axis}
+  
+
+
+\end{tikzpicture}
+
+
+
+\begin{flushleft}
+
+\begin{tikzpicture}
+\begin{axis}[
+    title={n vs t graph for algorithm - strassen's algorithm},
+    xlabel={Dimension [n]},
+    ylabel={Time [t in ns]},
+    xmin=0, xmax=50,
+    ymin=0, ymax=2000,
+    xtick={0,10,20,30,40},
+    ytick={0,200,400,600,800,1000,1200,1400,1600,1800,2000}
+]
+\addplot[
+    color=orange,
+    mark=dot,
+    ]
+    coordinates {
+  (0,0)(5,22.81)(10,88.35)(15,195.12)(19,317.05)(24,486.02)(29,709.93)(30,757.64)(32,842.93)(45,1658.07)
+    };
+    
+  \end{axis}
+  
+
+
+\end{tikzpicture}
+\end{flushleft}
+
+
+\section{CONCLUSION\\}
+For matrix with higher dimension, Strassen's method to compute multiplication of matrices is significantly faster than naive method.\\
+
+\section{Reference}
+\begin{enumerate}
+
+    \item \url{https://www.cs.cmu.edu/~15451-f19/LectureNotes/lec01-strassen.pdf}
+        \item \url{https://en.wikipedia.org/wiki/Strassen\_algorithm}
+\end{enumerate}
+
+
 
 \end{document}
 
