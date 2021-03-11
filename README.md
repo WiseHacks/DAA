@@ -2,11 +2,11 @@
 
 
 **Team Members**
-|   Enrollment No.  |   Name   |
-|   --------------  |   ----   |
-|    IIT2019063  |   DIVYESH RANA |
-|    IIT2019064  |   AKASH DEEP | 
-|    IIT2019065  |   GOPAL PEDADA |
+|   Enrollment No.  |   Name   |   Github Id |
+|   --------------  |   ----   | -----  |
+|    IIT2019063  |   DIVYESH RANA | WiseHacks |
+|    IIT2019064  |   AKASH DEEP | secretgeek07 |
+|    IIT2019065  |   GOPAL PEDADA | Gopal214 |
 
 **Group No-**"21"
 
