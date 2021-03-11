@@ -288,12 +288,28 @@ Note that Addition and Subtraction in Matrix works differently than numbers, run
     }
     
 \end{algorithm}
-
 \section{Algorithm Analysis}
 \subsection{Time Complexity:}
-\\\textbf{Approach 1:} 
-\\Here, we assume that integer operations take O(1) time. Three for loops are used in this code snippet ,nested one into other.Therefore, time complexity of this algorithm is O(n^3).
-\\\textbf{Approach 2:} 
+
+\textbf{Approach 1:} 
+Here, we assume that integer operations take O(1) time. Three for loops are used in this code snippet ,nested one into other.Therefore, time complexity of this algorithm is $O(n^3)$.
+
+
+\textbf{Approach 2:} 
+Here, addition and subtraction of two matrices takes $O(n^2)$ time.
+In this algorithm, we do 7 multiplications $(P_{1\dots7})$ for matrices and some addition and subtraction so the recurrence relation would be :
+
+$T(n)=7T(n/2)+ O(n^2)$
+
+Using Master Theorem, Time complexity for this recurrence relation will be $O(n^{log_2{7}})$, which is sub-cubic complexity $(O(n^{2.8}))$.
+
+$T_{avg} = O(n^{log_2{7}})$
+
+$T_{best} = O(1)$
+
+\subsection{Space Complexity}
+The space complexity for both algorithms is $O(n^2)$.
+
 \end{document}
 
 
