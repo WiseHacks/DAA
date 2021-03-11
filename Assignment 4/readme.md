@@ -78,7 +78,7 @@ Out:
 
 ### Theory
 
-Strassen’s Algorithm named after Volker Strassen is used to compute multiplication of two matrices, it is the improvement in divide and conquer approach which has time complexity O(n^3). 
+Strassen’s Algorithm named after Volker Strassen is used to compute multiplication of two matrices, it improves or optimizes the divide and conquer approach which has time complexity O(n^3) in worst case by reducing number of recursive calls. This alogorithm runs much faster than naive algorithm when dimensions of matrices are large. 
 
 ---
 
