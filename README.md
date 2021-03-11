@@ -37,7 +37,7 @@ cd assignment_04
 
 Run the code
 ```
-gcc code.c
+gcc strassen.c
 ./a.out
 ```
 **Test case**
