@@ -27,7 +27,7 @@ git clone https://github.com/WiseHacks/DAA
 ```
 Project Initialize
 ```
-cd daa
+cd DAA
 #create assignment-4 folder
 mkdir assignment_04
 
