@@ -190,7 +190,7 @@ Run a loop with index $i$ from $0$ to $n$ and inside that loop, run another loop
     \Fn{\FMain{$x$}}{ 
         $sign\gets 0$\;
         \If{$x>0$}{$sign\gets 1$\;}
-        \Else{
+        \ElseIf{$x<0$}{
             $sign\gets -1$\;
         }
       
@@ -334,4 +334,3 @@ The second algorithm uses the dynamic programming but has the time complexity of
 
 
 % Intro by gopal, algo by Divyesh, analysis by Akash
-
