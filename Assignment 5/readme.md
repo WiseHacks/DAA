@@ -37,7 +37,7 @@ cd assignment_05
 
 Run the code
 ```
-gcc sign_comparision_.c
+gcc sign_comparision_LZS.c
 ./a.out
 ```
 **Test case**
