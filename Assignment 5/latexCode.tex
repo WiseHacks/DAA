@@ -55,7 +55,7 @@ The longest zig-zag subsequence problem is to find length of the longest
 subsequence of given sequence such that all elements of this are
 alternating. A sequence is called a zig-zag sequence if the differences between successive elements strictly alternate between positive and negative. The first difference (if one exists) may be either positive or negative. A sequence with fewer than two elements is trivially a zig-zag sequence.
 
-If a sequence $(x1,x2,\dots,xn)$ is a alternative sequence then its element satistfy one of the following relation:
+If a sequence $(x1,x2,\dots,xn)$ is a alternative sequence then its elements satisfy one of the following relation:
 
 $(x1<x2>x3<x4>\dots xn)$ or
 
@@ -79,7 +79,7 @@ An array $Arr$ of length $n$ consists of integers is given as an input from the 
 
 
 
-\subsection{longest zig-zag subsequence using sign comparision}
+\subsection{longest zig-zag subsequence using sign comparison}
 
 We will proceed by comparing the mathematical signs(negative or positive) of the difference of two consecutive elements of $Arr$. To achieve this, we will store the sign of $(Arr[i]-Arr[i-1])$ in a variable, subsequently comparing it with that of $(Arr[i+1]-Arr[i])$.If it is different, we shall increment our result. 
 
@@ -107,13 +107,13 @@ $dp[i][0] = max(dp[i][0],dp[j][1]+1)$ if $Arr[j]<Arr[i]$,
 $dp[i][1] = max(dp[i][1],dp[j][0]+1)$ if $Arr[j]>Arr[i]$
 
 \vspace 5
-Note that the minimum length of zig-zag subsequence can be $1$, so intialize all the elements of $dp[n][2]$ with $1$.
+Note that the minimum length of zig-zag subsequence can be $1$, so initialize all the elements of $dp[n][2]$ with $1$.
 
 Run a loop with index $i$ from $0$ to $n$ and inside that loop, run another loop with index $j$ from $0$ to $i$ such that $j<i$ satisfies, now assign values in $dp[i][0]$ and $dp[i][1]$ as per relation shown above. Keep updating $result =  max(result,max(dp[i][0],dp[i][1]))$. Return result.
 
 \vspace 5
 \begin{algorithm}[H]
-    \caption{Longest zig-zag subsequence using sign comparision}
+    \caption{Longest zig-zag subsequence using sign comparison}
     \KwIn{Array $Arr$ of size $n$}
     \KwOut{length of longest zig-zag subsequence}
     \SetKwInOut{KwRequire}{Require}
@@ -255,7 +255,7 @@ when i = 3, $dp[i][0] = 3$ and $dp[i][1] = 4$.
 
 when i = 4, $dp[i][0] = 1$ and $dp[i][1] = 4$.
 
-clearly throught the computation, our $result$ will be $4$ and the length of longest zig-zag subsequence is also $4$.
+clearly throughout the computation, our $result$ will be $4$ and the length of longest zig-zag subsequence is also $4$.
 
 \section{Experimental Analysis}
 
