@@ -5,6 +5,7 @@ int max(int x, int y) {
     return y;
 }
 int LZS(int Arr[], int n) {
+    if(n == 0)return 0;
     int dp[n][2], result = 1;
     for (int i = 0; i < n; i++)dp[i][0] = 1, dp[i][1] = 1;
 
@@ -23,15 +24,9 @@ int LZS(int Arr[], int n) {
 }
 
 int main() {
-
-
     int n;
     scanf("%d", &n);
     int Arr[n];
     for (int i = 0; i < n; i++)scanf("%d", &Arr[i]);
-    if (n == 0) {
-        printf("0\n");
-        return 0;
-    }
     printf("%d\n", LZS(Arr, n));
 }
