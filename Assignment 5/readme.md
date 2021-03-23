@@ -42,11 +42,12 @@ gcc sign_comparison_LZS.c
 ```
 Input
 ```
+Integer n
 An array of size n
 ```
 Output
 ```
-Length of longest zig-zag subsequence
+Length of longest zig-zag subsequence in the array
 ```
 **Test case**
 ```
