@@ -40,6 +40,14 @@ Run the code
 gcc sign_comparison_LZS.c
 ./a.out
 ```
+Input
+```
+An array of size n
+```
+Output
+```
+Length of longest zig-zag subsequence
+```
 **Test case**
 ```
 Test Case-1
@@ -64,9 +72,7 @@ Out:
 
 ### Theory
 
-The longest zig-zag subsequence problem is to find length of the longest subsequence of given sequence such that all elements of this are alternating. A sequence is called a zig-
-zag sequence if the differences between successive elements
-strictly alternate between positive and negative
+The longest zig-zag subsequence problem is to find length of the longest subsequence of given sequence such that all elements of this are alternating. A sequence is called a zig-zag sequence if the differences between successive elements strictly alternate between positive and negative
 
 ---
 
