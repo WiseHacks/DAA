@@ -19,7 +19,6 @@ int LZS(int Arr[], int n) {
 }
 
 int main() {
-
     int n;
     scanf("%d", &n);
     int Arr[n];
