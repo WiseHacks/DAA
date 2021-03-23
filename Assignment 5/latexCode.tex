@@ -111,8 +111,8 @@ Note that the minimum length of zig-zag subsequence can be $1$, so intialize all
 
 Run a loop with index $i$ from $0$ to $n$ and inside that loop, run another loop with index $j$ from $0$ to $i$ such that $j<i$ satisfies, now assign values in $dp[i][0]$ and $dp[i][1]$ as per relation shown above. Keep updating $result =  max(result,max(dp[i][0],dp[i][1]))$. Return result.
 
-
-\begin{algorithm}
+\vspace 5
+\begin{algorithm}[H]
     \caption{Longest zig-zag subsequence using sign comparision}
     \KwIn{Array $Arr$ of size $n$}
     \KwOut{length of longest zig-zag subsequence}
@@ -124,6 +124,9 @@ Run a loop with index $i$ from $0$ to $n$ and inside that loop, run another loop
 
     \Fn{\FMain{$Arr$,$n$}}{ 
 
+        \If{$n=0$}{
+        \KwRet 0\;
+        }
        $length\gets 1$\;
         $prevSign\gets 0$\;
         \For{$i \gets 1 $ \text{ to }$n-1$}{
@@ -150,7 +153,10 @@ Run a loop with index $i$ from $0$ to $n$ and inside that loop, run another loop
     \SetKwProg{Fn}{Function}{:}{}
 
     \Fn{\FMain{$Arr$,$n$}}{ 
-    
+        
+        \If{$n=0$}{
+        \KwRet 0\;
+        }
         $result\gets 1$\;
        \For{$i \gets 0$ \text{ to } $n-1$}{
             $dp[i][0]\gets 1$\;
