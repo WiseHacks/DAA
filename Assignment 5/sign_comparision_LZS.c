@@ -6,6 +6,7 @@ int signum(int x) {
     else return 0;
 }
 int LZS(int Arr[], int n) {
+    if(n == 0)return 0;
     int prevSign = 0, length = 1;
     for (int i = 1; i < n; i++) {
         int sign = signum(Arr[i] - Arr[i - 1]);
@@ -23,9 +24,5 @@ int main() {
     scanf("%d", &n);
     int Arr[n];
     for (int i = 0; i < n; i++)scanf("%d", &Arr[i]);
-    if (n == 0) {
-        printf("0\n");
-        return 0;
-    }
     printf("%d\n", LZS(Arr, n));
 }
